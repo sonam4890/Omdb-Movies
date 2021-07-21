@@ -58,8 +58,9 @@ class Main extends Component {
         />
         <div className={styles.Trending}>Trending Movies</div>
         <div className={styles.TopMovies}>
-          {this.props.currentMovies?.map((item) => (
+          {this.props.currentMovies?.map((item, index) => (
             <MovieModel
+              key={index.toString()}
               movie={item}
               movieDetail={this.props.onMovieDetail}
               watchlistItem={this.props.onWatchDetail}

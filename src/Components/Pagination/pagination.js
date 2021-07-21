@@ -9,8 +9,8 @@ const pagination = (props) => {
       <span>
         {movies + 1 - props.moviePerPage} - {movies} of {props.total}
       </span>
-      <i class="angle left icon" onClick={props.prev}></i>
-      <i class="angle right icon" onClick={props.next}></i>
+      <i className="angle left icon" onClick={props.prev}></i>
+      <i className="angle right icon" onClick={props.next}></i>
     </div>
   );
 };

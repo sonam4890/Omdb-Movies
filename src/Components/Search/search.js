@@ -31,7 +31,7 @@ const search = (props) => {
         onChange={(e) => props.inputChange(e.target.value)}
       ></input>
       <span className={styles.Icon}>
-        <i class="search icon"></i>
+        <i className="search icon"></i>
       </span>
       <SearchList />
     </div>

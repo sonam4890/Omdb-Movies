@@ -65,7 +65,7 @@ export const showMovieDetail = (data) => {
 export const movieDetail = (movie) => {
   return (dispatch) => {
     axios
-      .get(`http://www.omdbapi.com/?t=${movie.title}&apikey=c74de356`)
+      .get(`https://www.omdbapi.com/?t=${movie.title}&apikey=c74de356`)
       .then((res) => {
         console.log(res);
         dispatch(
@@ -85,7 +85,7 @@ export const movieDetail = (movie) => {
 export const watchDetail = (movie) => {
   return (dispatch) => {
     axios
-      .get(`http://www.omdbapi.com/?t=${movie.title}&apikey=c74de356`)
+      .get(`https://www.omdbapi.com/?t=${movie.title}&apikey=c74de356`)
       .then((res) => {
         console.log(res);
         dispatch(
