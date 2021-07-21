@@ -1,0 +1,13 @@
+.Head {
+  border: 1px solid rgb(85, 81, 81, 0.3);
+  margin: 0, auto;
+  text-align: end;
+  background-color: rgb(190, 186, 186, 0.3);
+  padding: 5px;
+}
+
+.Head i {
+  display: inline-block;
+  padding: 8px 15px;
+  margin: 0 15px;
+}

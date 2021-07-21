@@ -1,0 +1,97 @@
+.Movie {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  margin-top: 100px;
+  background-color: rgb(29, 28, 28);
+  color: rgb(236, 230, 230);
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.GenreButton {
+  display: inline-block;
+  padding: 5px 8px;
+  border: 1px solid rgb(236, 230, 230);
+  border-radius: 20px;
+  margin: 20px 10px;
+  cursor: pointer;
+}
+
+.GenreButton:hover {
+  background-color: rgb(63, 62, 62);
+}
+
+.Plot {
+  border-bottom: 1px solid rgb(104, 102, 102);
+  padding: 15px 0;
+}
+
+.Team {
+  text-transform: capitalize;
+  font-weight: 600;
+  padding: 15px 0;
+  border-bottom: 1px solid rgb(104, 102, 102);
+}
+
+.TeamSpan {
+  color: rgb(53, 81, 238);
+  margin-left: 15px;
+  font-weight: normal;
+  word-spacing: 2px;
+}
+
+.AddButton {
+  width: 30%;
+  background-color: rgb(63, 62, 62);
+  color: white;
+  padding: 12px 15px;
+  margin: 10px 0;
+  outline: none;
+  border: none;
+  text-align: start;
+}
+
+.AddButton:hover {
+  background-color: rgb(80, 78, 78);
+}
+
+.Rating {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  display: flex;
+  flex-direction: row;
+  font-size: 12px;
+}
+
+.Rated {
+  margin: 10px;
+  font-weight: bold;
+  color: rgb(185, 181, 181);
+}
+
+.Rate {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 5px 0px;
+}
+
+.Rate:hover {
+  background-color: rgb(63, 62, 62);
+}
+
+@media (max-width: 900px) {
+  .Rating {
+    position: relative;
+    top: 0;
+    left: 0;
+    border-bottom: 1px solid rgb(104, 102, 102);
+  }
+}
+@media (max-width: 560px) {
+  .AddButton {
+    width: 50%;
+  }
+}

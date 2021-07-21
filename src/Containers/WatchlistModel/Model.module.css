@@ -1,0 +1,45 @@
+.WatchlistModel {
+  background-color: rgb(245, 251, 251);
+  width: 100%;
+  min-height: 70vh;
+  margin-top: 50px;
+  box-sizing: border-box;
+}
+
+.Head {
+  height: 80px;
+  border-bottom: 1px solid rgb(153, 150, 150);
+  position: relative;
+  font-size: 20px;
+  padding: 20px;
+  background-color: rgb(200, 221, 221);
+}
+
+.Edit {
+  position: absolute;
+  font-size: 15px;
+  top: 10px;
+  right: 10px;
+  padding: 10px;
+}
+
+.Edit:hover {
+  background-color: rgb(209, 202, 202);
+}
+
+.Middle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px 20px;
+  border-bottom: 1px solid rgb(153, 150, 150);
+  background-color: rgb(200, 221, 221);
+}
+
+.Empty {
+  text-align: center;
+  font-size: 25px;
+  position: relative;
+  top: 30vh;
+  color: black;
+}

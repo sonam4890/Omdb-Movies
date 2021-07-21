@@ -1,0 +1,54 @@
+.Watchlist {
+  display: flex;
+  flex-direction: row;
+  color: black;
+  border-bottom: 1px solid rgb(153, 150, 150);
+  padding: 20px;
+  line-height: 22px;
+}
+
+.Poster {
+  width: 200px;
+  height: 200px;
+  box-sizing: border-box;
+}
+
+.Detail {
+  margin-left: 15px;
+}
+
+.Year {
+  color: rgb(65, 62, 62);
+  padding: 5px 0;
+  word-spacing: 3px;
+}
+
+.Title {
+  font-size: 20px;
+  color: rgb(44, 63, 240);
+  padding: 5px 0;
+}
+
+.Actors {
+  color: rgb(44, 63, 240);
+  padding: 5px 0;
+  word-spacing: 3px;
+}
+
+.Rating > span {
+  padding: 10px;
+}
+
+.Delete {
+  text-decoration: underline;
+  color: green;
+  font-size: 16px;
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+/* @media (max-width: 1000px) {
+  .Poster {
+    width: 20%;
+  }
+} */

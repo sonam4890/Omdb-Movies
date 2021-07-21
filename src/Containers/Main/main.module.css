@@ -1,0 +1,52 @@
+.Main {
+  position: relative;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.Upcoming,
+.Trending {
+  color: gold;
+  font-size: 25px;
+  padding: 30px 0;
+  margin-top: 50px;
+}
+
+.TopMovies {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+
+.Button {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 25vh;
+  width: 100%;
+  justify-content: space-between;
+  z-index: 100;
+}
+
+@media (max-width: 1100px) {
+  .Backdrop {
+    width: 100%;
+  }
+  .Poster {
+    width: 20%;
+  }
+  /* .TopMovies {
+    flex-wrap: wrap;
+  } */
+}
+
+@media (max-width: 1100px) {
+  .Backdrop {
+    width: 100%;
+  }
+  .Poster {
+    width: 20%;
+  }
+}

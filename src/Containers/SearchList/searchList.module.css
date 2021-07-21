@@ -1,0 +1,50 @@
+.SearchList {
+  position: relative;
+  z-index: 100;
+  width: 100%;
+  background-color: rgb(42, 42, 42);
+}
+
+p {
+  padding: 2px;
+  margin: 0;
+}
+
+.Item {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  height: 100px;
+  padding: 5px;
+  border-bottom: 1px solid gray;
+}
+
+.Poster {
+  width: 10%;
+  height: 100%;
+}
+
+.Details {
+  margin-left: 20px;
+  color: rgb(200, 195, 195);
+}
+
+.Title {
+  color: rgb(236, 230, 230);
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.Footer {
+  color: white;
+  padding: 15px;
+}
+
+@media (max-width: 500px) {
+  .Poster {
+    width: 20%;
+  }
+  .Title {
+    font-size: 15px;
+  }
+}
