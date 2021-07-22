@@ -8,9 +8,9 @@
 }
 
 .Poster {
-  width: 200px;
+  position: relative;
+  width: 180px;
   height: 200px;
-  box-sizing: border-box;
 }
 
 .Detail {

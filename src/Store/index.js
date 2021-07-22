@@ -5,4 +5,5 @@ export {
   fetchWatchlist,
   watchDetail,
   deleteMovie,
+  searchHandler,
 } from "./action";

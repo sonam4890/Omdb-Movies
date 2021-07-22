@@ -23,7 +23,7 @@ const movie = (props) => {
         <div style={{ padding: "10px 0" }}>
           {props.movie?.Year}
           <span style={{ padding: "0 20px" }}>
-            {time(props.movie?.Runtime)}
+            {props.movie?.Runtime !== "N/A" ? time(props.movie?.Runtime) : null}
           </span>
         </div>
       </div>
@@ -38,35 +38,40 @@ const movie = (props) => {
       <div className={styles.Plot}>{props.movie?.Plot}</div>
       <div className={styles.Rating}>
         <div className={styles.Rated}>
-          IMDb RATING
-          <div className={styles.Rate}>
-            <div style={{ fontSize: "22px", color: "gold" }}>
-              <i className="star icon"></i>
-            </div>
+          {props.movie?.imdbRating !== "N/A" ? (
             <div>
-              <span style={{ fontSize: "18px", color: "rgb(236, 230, 230)" }}>
-                {props.movie?.imdbRating}
-              </span>
-              /10 <br></br>
-              {(
-                parseInt(props.movie?.imdbVotes?.split(",").join("")) / 1000
-              ).toFixed(2)}
-              K
+              IMDb RATING
+              <div className={styles.Rate}>
+                <div className={styles.Icon}>
+                  <i className="star icon"></i>
+                </div>
+                <div>
+                  <span className={styles.ImdbRate}>
+                    {props.movie?.imdbRating}
+                  </span>
+                  /10 <br></br>
+                  {(
+                    parseInt(props.movie?.imdbVotes?.split(",").join("")) / 1000
+                  ).toFixed(2)}
+                  K
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-        <div className={styles.Rated}>
-          YOUR RATING
-          <div className={styles.Rate}>
-            <div style={{ fontSize: "22px", padding: "8px 0" }}>
-              <i className="star outline icon"></i>
-            </div>
+          ) : (
             <div>
-              <span style={{ fontSize: "22px", color: "rgb(236, 230, 230)" }}>
-                Rate
-              </span>
+              {props.movie?.Ratings[0]?.Source} Rating
+              <div className={styles.Rate}>
+                <div className={styles.Icon}>
+                  <i className="star icon"></i>
+                </div>
+                <div>
+                  <span className={styles.ImdbRate}>
+                    {props.movie?.Ratings[0]?.Value}
+                  </span>
+                </div>
+              </div>
             </div>
-          </div>
+          )}
         </div>
       </div>
       <div>
@@ -100,3 +105,21 @@ const movie = (props) => {
 };
 
 export default movie;
+
+{
+  /* <div className={styles.Rated}>
+          YOUR RATING
+          <div className={styles.Rate}>
+            <div style={{ fontSize: "22px", padding: "8px 0" }}>
+              <i className="star outline icon"></i>
+            </div>
+            <div>
+              <span style={{ fontSize: "22px", color: "rgb(236, 230, 230)" }}>
+                Rate
+              </span>
+            </div>
+          </div>
+        </div> */
+}
+
+// {props.movie?.Ratings[0]?.Source}

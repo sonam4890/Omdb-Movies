@@ -83,7 +83,6 @@ class Main extends Component {
 
 const mapStateToProps = (state) => ({
   search: state.searchData,
-  movieModel: state.showMovieModel,
   movieData: state.movieDetail,
   watchlist: state.watchlist,
 });

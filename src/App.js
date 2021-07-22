@@ -15,7 +15,7 @@ class App extends Component {
     topRatedMovies: [],
     currentPage: 1,
     moviesPerPage: 4,
-    redirectMovie: this.props.movieModel,
+    search: this.props.searchModel,
   };
 
   componentDidMount() {
@@ -25,7 +25,6 @@ class App extends Component {
         `https://api.themoviedb.org/3/trending/movie/week?api_key=08c2f55b292be9f9e5c4ee8cf6a80fd6`
       )
       .then((res) => {
-        console.log(res.data.results);
         this.setState({
           topRatedMovies: res.data.results,
         });
@@ -60,9 +59,9 @@ class App extends Component {
     });
   };
 
-  setMoviesPerPage = () => {
+  searchModelHandler = () => {
     this.setState({
-      moviesPerPage: 3,
+      search: false,
     });
   };
 
@@ -78,7 +77,7 @@ class App extends Component {
     );
 
     return (
-      <div className={styles.App}>
+      <div className={styles.App} onClick={this.props.onSearchHandler}>
         <Navbar search={this.props.onSearch} />
         <Switch>
           <Route
@@ -116,15 +115,16 @@ class App extends Component {
 
 const mapStateToProps = (state) => ({
   search: state.searchData,
-  movieModel: state.showMovieModel,
   movieData: state.movieDetail,
   watchlist: state.watchlist,
+  searchModel: state.showSearchModel,
 });
 
 const mapDispatchToProps = (dispatch) => {
   return {
     onFetchWatchlist: () => dispatch(actions.fetchWatchlist()),
     onSearch: (title) => dispatch(actions.search(title)),
+    onSearchHandler: () => dispatch(actions.searchHandler()),
     onWatchlist: (data) => dispatch(actions.watchlist(data)),
     onMovieDetail: (data) => dispatch(actions.movieDetail(data)),
     onWatchDetail: (data) => dispatch(actions.watchDetail(data)),

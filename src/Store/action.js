@@ -1,17 +1,9 @@
 import axios from "axios";
 import * as actionType from "./actionTypes";
 
-export const fetchDataSuccess = (data) => {
+export const searchHandler = () => {
   return {
-    type: actionType.FETCH_DATA_SUCCESS,
-    data,
-  };
-};
-
-export const fetchDataFailed = (data) => {
-  return {
-    type: actionType.FETCH_DATA_FAILED,
-    error: data,
+    type: actionType.HANDLE_SEARCH_MODEL,
   };
 };
 

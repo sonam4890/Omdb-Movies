@@ -20,7 +20,7 @@
   width: 100%;
   color: white;
   font-weight: bold;
-  padding: 72vh 0 30px 60px;
+  padding: 75vh 0 30px 60px;
   text-align: center;
   background-image: linear-gradient(rgb(255, 255, 255, 0.1), black);
 }
@@ -45,5 +45,11 @@
   }
   .Poster {
     width: 20%;
+  }
+}
+
+@media (max-width: 700px) {
+  .Title {
+    font-size: 20px;
   }
 }

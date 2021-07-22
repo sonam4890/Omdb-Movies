@@ -21,6 +21,8 @@ const reducer = (state = initialState, action) => {
       };
     case actionType.SEARCH_FAILED:
       return { ...state, error: action.error, showSearchModel: false };
+    case actionType.HANDLE_SEARCH_MODEL:
+      return { ...state, showSearchModel: false };
     case actionType.SHOW_MOVIE_DETAIL:
       return {
         ...state,

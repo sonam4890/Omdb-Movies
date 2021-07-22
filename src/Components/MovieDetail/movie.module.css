@@ -82,6 +82,16 @@
   background-color: rgb(63, 62, 62);
 }
 
+.Icon {
+  font-size: 22px;
+  color: gold;
+}
+
+.ImdbRate {
+  font-size: 18px;
+  color: rgb(236, 230, 230);
+}
+
 @media (max-width: 900px) {
   .Rating {
     position: relative;

@@ -16,11 +16,13 @@ const watchlist = (props) => {
         <div className={styles.Rating}>
           <span>
             <i className="star icon" style={{ color: "gold" }}></i>
-            {props.movie?.imdbRating}
+            {props.movie?.imdbRating !== "N/A"
+              ? props.movie?.imdbRating
+              : props.movie?.Ratings[0]?.Value}
           </span>
-          <span>
+          {/* <span>
             <i className="star outline icon"></i>Rate
-          </span>
+          </span> */}
         </div>
         <div className={styles.Actors}>{props.movie?.Actors}</div>
         <div>{props.movie?.Plot}</div>
